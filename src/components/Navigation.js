@@ -4,10 +4,19 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
+      <div>
     <Navbar collapseOnSelect expand="lg" variant="dark" className='bg-primary'>
-      <div className="container">
+      <div className="container-fluid">
         <Link to="/">
-        <Navbar.Brand>Sigfox Dashboard</Navbar.Brand>
+        <Navbar.Brand>
+          <img src="../images/logo.png"
+               width="30"
+               height="30"
+               className="d-inline-block align-top"
+               alt=""
+          />
+         Sigfox
+        </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -34,6 +43,7 @@ const Navigation = () => {
         </Navbar.Collapse>
       </div>
     </Navbar>
+      </div>
   );
 };
 

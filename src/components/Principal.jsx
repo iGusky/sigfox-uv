@@ -17,7 +17,7 @@ const Principal = () => {
     <div>
       <section className="container mt-5">
         <h1>Bienvenido...</h1>
-        <p>Los datos mostrados son del dia de hoy</p>
+        <p>La información que se muestra a continuación es del día de hoy</p>
         <MainTable data={data} />
         <Link to="/historial" className="mt-3 mb-5 d-flex justify-content-center">Acceder a los datos de dias anteriores...</Link>
       </section>

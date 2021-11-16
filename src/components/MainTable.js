@@ -23,8 +23,8 @@ const MainTable = ({data}) => {
 
 
     return (
-        <Table striped bordered hover responsive size="sm">
-            <thead>
+        <Table bordered hover responsive size="sm" className="container-sm">
+            <thead className="bg-primary">
             <tr>
                 <th>Estado</th>
                 <th>Fecha</th>
