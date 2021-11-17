@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Pagination from "react-js-pagination";
 import MainTable from './MainTable';
 import { fetchMessages } from '../api/fetchMessages';
+import {Card} from "react-bootstrap";
 
 const Historial = () => {
   const [elements, setElements] = useState('');
@@ -17,25 +18,28 @@ const Historial = () => {
     loadData();
   }, [actualPage])
     return (
-        <div className='container-fluid'>
-            <div className='row'>
-                <div className='col-md-12 col-sm-12 col-lg-12'>
-                    <MainTable data={data}/>
-                </div>
-                <div className='col-md-4'/>
-                <div className='col-md-4'>
+        <div className="container-sm">
+            <Card className="container-fluid">
+                <Card.Title>
+                    <h1 className="text-primary">Historial</h1>
+                </Card.Title>
+                <Card.Body className='row'>
+                    <div className='col-md-12 col-sm-12 col-lg-12'>
+                        <MainTable data={data}/>
+                    </div>
+                </Card.Body>
+                <Card.Footer className='d-flex justify-content-center col-md-12 col-md-8 col-sm-12'>
                     <Pagination
                         activePage={actualPage}
                         totalItemsCount={elements}
                         itemsCountPerPage={50}
-                        pageRangeDisplayed={10}
+                        pageRangeDisplayed={8}
                         onChange={async(e)=>{
                             await setActualPage(e);
                         }}
                     />
-                </div>
-                <div className='col-md-4'/>
-            </div>
+                </Card.Footer>
+            </Card>
         </div>
     )
 }
