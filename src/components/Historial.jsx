@@ -3,6 +3,7 @@ import Pagination from "react-js-pagination";
 import MainTable from './MainTable';
 import { fetchMessages } from '../api/fetchMessages';
 import {Card} from "react-bootstrap";
+import {Footer} from "./Footer";
 
 const Historial = () => {
   const [elements, setElements] = useState('');
@@ -40,6 +41,7 @@ const Historial = () => {
                     />
                 </Card.Footer>
             </Card>
+            <Footer />
         </div>
     )
 }

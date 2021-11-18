@@ -1,6 +1,40 @@
 html {
-  font-size: 16px
+    font-size: 18px;
+    font-family: Arial, Roboto, system-ui;
 }
+
+body {
+    background-color: #f5f7fa!important;
+}
+
+div.uv {
+    background: #0D47A1;
+    color: #ffffff;
+    text-align: right;
+}
+
+div.sigfox-nav {
+    background: #673fb4;
+    color: #ffffff;
+}
+
+.sigfox-foot {
+    background: #673fb4;
+    color: #ffffff;
+    text-align: center;
+    padding: 7px 20px;
+    width: 100%;
+    bottom: 0;
+}
+
+.foot-text {
+    font-size: 13px;
+}
+
+.th-text {
+    color: #ffffff;
+}
+
 .Encendido{
     background-color: #28a745;
     color: white;

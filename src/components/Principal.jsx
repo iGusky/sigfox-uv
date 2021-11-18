@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import MainTable from './MainTable'
 import { fetchMessages } from '../api/fetchMessages';
 import { Card } from "react-bootstrap";
+import { Footer } from "./Footer"
 
 const Principal = () => {
   const [data, setData] = useState([]);
@@ -17,9 +18,13 @@ const Principal = () => {
   return (
     <div>
       <section className="container mt-5">
-        <Card>
+        <Card className="mt-5">
+          <Card.Header>
+            <Card.Title>
+              <Card.Title><h1 className="text-center text-primary">Bienvenido</h1></Card.Title>
+            </Card.Title>
+          </Card.Header>
           <Card.Body>
-            <Card.Title><h1 className="text-primary">Bienvenido</h1></Card.Title>
             <Card.Text>La información presentada es del día de hoy</Card.Text>
             <MainTable data={data} />
           </Card.Body>
@@ -27,6 +32,7 @@ const Principal = () => {
         <div className="d-flex justify-content-center" >
           <Link to="/historial" className="mt-2 mb-5  d-flex justify-content-center btn btn-info" >Acceder al historial </Link>
         </div>
+        <Footer />
       </section>
     </div>
   )

@@ -24,10 +24,10 @@ const MainTable = ({data}) => {
 
     return (
         <Table bordered hover responsive size="sm" className="container-sm">
-            <thead className="bg-primary">
+            <thead className="bg-info">
             <tr>
-                <th>Estado</th>
-                <th>Fecha</th>
+                <th className="th-text">Estado</th>
+                <th className="th-text">Fecha</th>
                 {/* <th>Flujo</th> */}
 
             </tr>
